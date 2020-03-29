@@ -6,7 +6,6 @@
     android:orientation="horizontal"
     android:background="@color/darkBlue"
     android:gravity="center_vertical"
-
     >
 
     <ImageButton
@@ -14,8 +13,19 @@
         android:layout_height="50dp"
         android:src="@drawable/ic_arrow_back_white_24dp"
         android:background="?attr/selectableItemBackground"
-        android:id="@+id/note_toolbar_back_arrow_button"
+        android:id="@+id/settings_toolbar_back_arrow_button"
         android:layout_margin="2dp"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        />
+
+
 
 </LinearLayout>

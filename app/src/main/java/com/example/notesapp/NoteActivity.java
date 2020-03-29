@@ -1,6 +1,7 @@
 package com.example.notesapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +28,7 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
     private EditText mContentEditText;
     private ImageButton mBackArrowButton;
     private Button mSaveButton;
+    private Toolbar mNoteToolbar;
 
     //Variables
     private Note mInitialNote;
@@ -42,8 +44,11 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
 
         mTitleEditText = findViewById(R.id.title_edittext);
         mContentEditText = findViewById(R.id.content_edittext);
-        mBackArrowButton = findViewById(R.id.toolbar_back_arrow_button);
+        mBackArrowButton = findViewById(R.id.note_toolbar_back_arrow_button);
         mSaveButton = findViewById(R.id.save_button);
+        mNoteToolbar=findViewById(R.id.note_toolbar);
+
+        setSupportActionBar(mNoteToolbar);
 
         mNoteRepository = new NoteRepository(this);
 
@@ -117,11 +122,11 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
 
     private void disableContentInteraction() {
 
-        mContentEditText.setKeyListener(null);
+        /*mContentEditText.setKeyListener(null);
         mContentEditText.setFocusable(false);
         mContentEditText.setFocusableInTouchMode(false);
         mContentEditText.setCursorVisible(false);
-        mContentEditText.requestFocus();
+        mContentEditText.clearFocus();*/
 
     }
 
@@ -205,7 +210,7 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
 
             }
 
-            case R.id.toolbar_back_arrow_button: {
+            case R.id.note_toolbar_back_arrow_button: {
 
                 finish();
                 break;
