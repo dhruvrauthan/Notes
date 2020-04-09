@@ -1,5 +1,6 @@
 # Notes 
-This is a notes keeping app. 
+This is a notes keeping app which takes user input and stores it in SQLiteDatabases and retrieves them when required.
+
 It uses SQLiteDatabase, NavigationDrawer and Async Tasks.
 
 
